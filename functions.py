@@ -69,3 +69,27 @@ def complete_todo(input, data_file=FILEPATH):
     my_list = load_todo_data(data_file)
     my_list.pop(input)
     write_todo_data(my_list)
+
+# def complete_todo(data_file=FILEPATH):
+#     show_list(data_file)
+#
+#     my_list = load_todo_data(data_file)
+#
+#     valid_option = True
+#     while valid_option:
+#         item_to_edit = input("Which item do you want to complete? ")
+#         try:
+#             number = int(item_to_edit)
+#         except ValueError:
+#             print("That is not a valid number.\n")
+#         else:
+#             if int(item_to_edit) > len(my_list):
+#                 print("That is not a valid option. Input a valid number from the list.\n")
+#             else:
+#                 task = my_list[number - 1].strip('\n')
+#                 print(f"Item '{number} - {task}' completed.\n"
+#                       f"Removing from list.\n")
+#                 my_list.pop(number - 1)
+#                 valid_option = False
+#
+#     write_todo_data(my_list)
